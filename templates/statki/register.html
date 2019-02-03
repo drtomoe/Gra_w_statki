@@ -1,0 +1,17 @@
+{% extends 'statki/base.html' %}
+
+{% block content %}
+    <form method="POST">
+    {% csrf_token %}
+    <fieldset class="form-group">
+        <legend>Register here</legend>
+        {{ form.as_p }}
+        <input type="submit" value="Sign up" class="btn btn-outline-info">
+
+    </fieldset>
+
+
+    </form>
+
+
+{% endblock %}

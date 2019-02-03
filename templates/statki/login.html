@@ -1,0 +1,14 @@
+{% extends 'statki/base.html' %}
+
+{% block content %}
+
+    <form method="POST">
+    {% csrf_token %}
+        <h1>Log in</h1>
+        {{ form.as_p }}
+        <input type="submit" class="btn btn-outline-info" value="LogIn">
+
+    </form>
+
+
+{% endblock %}

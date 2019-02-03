@@ -1,0 +1,47 @@
+td {
+    padding: 0px;
+}
+
+.form-check-label {
+    background-color: white;
+}
+
+
+.alfabet {
+    border: 0px;
+    height: 20px;
+    width: 40px;
+    /*text-align: center;*/
+}
+
+.numeral {
+    height: 40px;
+    width: 20px;
+    font-weight: bold;
+    background-color: white;
+    /*border-right: 1px solid black;*/
+}
+
+/*do panelu gry*/
+
+.panel-cell  {
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+}
+
+.border-red {
+    border-color: red;
+}
+
+.cellYellow {
+    background-color: yellow;
+}
+
+.cellGreen {
+    background-color: green;
+}
+
+/*do zasobnika statków*/
+

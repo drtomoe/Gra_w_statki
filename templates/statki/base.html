@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- nasz CSS -->
+    <link rel="stylesheet" href="{% static 'statki/main.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+
+
+
+    {% if title %}
+        <title>statki - {{ title }}</title>
+    {% else %}
+        <title>statki</title>
+    {% endif %}
+
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <nav class="navbar navbar-expand-md bg-light navbar-secondary">
+            {# lewa strona navbara#}
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="{% url 'statki' %}">Statki</a>
+            </div>
+            {#  prawa strona navbara#}
+            <div class="navbar-nav">
+                {% if user.is_authenticated %}
+                    <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                {% else %}
+                     <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                     <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+                {% endif %}
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main role="main" class="container">
+    {% block content %}
+
+    {% endblock %}
+
+
+
+</main>
+<script src="{% static 'statki/statki.js' %}"></script>
+</body>
+</html>
